@@ -10,11 +10,11 @@ import { Octicons } from '@expo/vector-icons';
 
 import { FontAwesome5 } from '@expo/vector-icons';
 
-export default function Dashboard() {
+export default function Dashboard({openDrawer, navigation}) {
   return (
     <View style={{flex:1, backgroundColor:Bg, justifyContent:"center", alignItems:"center"}}>
       <View style={{height:120, borderBottomLeftRadius:35,  borderBottomRightRadius:35, flexDirection:'row', width:"100%", backgroundColor:Primary}}>
-        <TouchableOpacity style={{flex:1, justifyContent:"center", paddingLeft:10, alignItems:"flex-start"}}>
+        <TouchableOpacity onPress={openDrawer} style={{flex:1, justifyContent:"center", paddingLeft:10, alignItems:"flex-start"}}>
         <Foundation name="align-left" size={24} color="#fff" />
         </TouchableOpacity>
         <View style={{ flex:3, justifyContent:"center", alignItems:"center"}}>
@@ -55,7 +55,7 @@ export default function Dashboard() {
 
       {/* start of tabs */}
       <View style={{ marginBottom:20, height:120, width:"90%", justifyContent:"space-between", marginTop:10, flexDirection:"row", }}>
-    <TouchableOpacity style={{height: 140, alignItems:"center",justifyContent:"center", width: 155, borderRadius:16, backgroundColor:"#fff"}}>
+    <TouchableOpacity onPress={()=>{}} style={{height: 140, alignItems:"center",justifyContent:"center", width: 155, borderRadius:16, backgroundColor:"#fff"}}>
     <FontAwesome5 name="hands" size={24} color={Orange} />
     <Text style={{fontSize:20, fontWeight:"bold"}}>Get a Service</Text>
     </TouchableOpacity>
